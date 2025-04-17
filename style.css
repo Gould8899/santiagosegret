@@ -1,0 +1,429 @@
+/* Variables CSS para facilitar el mantenimiento */
+:root {
+  --color-principal: #cd3636;
+  --color-secundario: #fdf3ec;
+  --color-fondo: #000;
+  --color-texto: #fff;
+  --color-overlay: rgba(30, 30, 30, 0.9);
+  --color-menu: rgba(40, 40, 40, 0.95);
+}
+
+/* ---------------------------
+       ESTILOS BASE
+    --------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-texto);
+  background: var(--color-fondo);
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* ---------------------------
+       LAYOUT PRINCIPAL: MENÚ LATERAL Y CONTENIDO
+    --------------------------- */
+.container {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* MENÚ LATERAL */
+nav.sidebar {
+  background: var(--color-menu);
+  width: 220px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav.sidebar h1 {
+  color: var(--color-principal);
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pestañas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pestañas li {
+  margin-bottom: 10px;
+}
+
+.pestañas a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--color-secundario);
+  background: transparent;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.pestañas a:hover,
+.pestañas a.active {
+  background: var(--color-principal);
+}
+
+/* CONTENEDOR DE SECCIONES (SCROLL HORIZONTAL) */
+main.content-container {
+  flex: 1;
+  overflow-x: auto;
+  display: flex;
+  scrollbar-width: none;
+  /* Firefox */
+  scroll-behavior: smooth;
+}
+
+main.content-container::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+/* Cada sección ocupa el 100% del ancho */
+section.seccion {
+  flex: 0 0 100%;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background: var(--color-overlay);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+section.seccion h2 {
+  margin-top: 0;
+  border-bottom: 2px solid var(--color-principal);
+  padding-bottom: 5px;
+}
+
+/* ---------------------------
+       SECCIÓN INICIO
+       Video de fondo a pantalla completa
+    --------------------------- */
+#inicio {
+  background: none;
+  padding: 0;
+}
+
+.video-background {
+  position: fixed; /* Fija el video en la pantalla */
+  bottom: 10%; /* Distancia desde el borde inferior */
+  right: 10%; /* Distancia desde el borde derecho */
+  width: 50vw; /* El ancho será el 50% del ancho de la ventana */
+  height: 28vw; /* Mantén la proporción 16:9 (ancho/altura) */
+  z-index: -1; /* Envía el video detrás del contenido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra para destacar */
+  border-radius: 8px; /* Bordes redondeados */
+  overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+.inicio-content {
+  position: relative; /* Asegura que el texto esté por encima */
+  z-index: 1; /* Coloca el texto por encima del video */
+}
+
+.video-background iframe {
+  width: 100%; /* Asegura que el iframe ocupe todo el contenedor */
+  height: 100%;
+  border: 0;
+}
+
+.video-background iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.inicio-content {
+  position: relative;
+  z-index: 2;
+  padding: 50px;
+}
+
+.inicio-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  border: none;
+}
+
+/* NUEVOS ESTILOS PARA PESTAÑAS DE PARTITURAS */
+.tab-menu-partituras {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  margin: 0 0 20px 0;
+  overflow-x: auto;
+  border-bottom: 2px solid var(--color-principal);
+}
+
+.tab-menu-partituras li a {
+  padding: 1px 1px;
+  background: var(--color-menu);
+  color: var(--color-texto);
+  text-decoration: none;
+  border-radius: 9px 9px 0 0;
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+
+.tab-menu-partituras li a:hover,
+.tab-menu-partituras li a.active {
+  background: var(--color-principal);
+  color: var(--color-secundario);
+}
+
+.tab-content-partituras .tab-pane {
+  display: none;
+}
+
+.tab-content-partituras .tab-pane.active {
+  display: block;
+}
+
+.subtitulo-partituras {
+  font-size: 1.2em; /* Tamaño más pequeño */
+  font-weight: normal; /* Cambia a texto normal si no quieres negrita */
+  color: var(--color-secundario); /* Usa el color claro definido en la página */
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+  grid-column: 1 / -1; /* Asegura que ocupe toda la fila */
+}
+
+/* ---------------------------
+       VIDEOS: Menú interno (Pestañas) en la Sección Videos
+    --------------------------- */
+.video-tabs {
+  margin-bottom: 20px;
+}
+
+.tab-menu {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-menu li a {
+  display: block;
+  padding: 8px 12px;
+  background: transparent;
+  color: var(--color-texto);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.tab-menu li a:hover,
+.tab-menu li a.active {
+  background: var(--color-principal);
+}
+
+/* Estilos para el contenido de cada pestaña */
+.tab-content .tab-pane {
+  display: none;
+}
+
+.tab-content .tab-pane.active {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 columnas iguales */
+  gap: 10px;
+  /* Espacio entre videos */
+}
+
+.video {
+  background: rgba(50, 50, 50, 0.9);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.video iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* ---------------------------
+       PARTITURAS
+       Uso de grid para lograr bloques uniformes en tamaño
+    --------------------------- */
+.obras-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 2px;
+  margin-top: 15px;
+}
+
+.obra {
+  background: rgba(50, 50, 50, 0.9);
+  border-radius: 4px;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 80px;
+  padding: 6px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.obra h4 {
+  margin: 4px 0 2px;
+  font-size: 0.9em;
+}
+
+.obra p {
+  margin: 0 0 6px;
+  color: #ccc;
+  font-size: 0.85em;
+}
+
+.pdf-link {
+  display: inline-block;
+  padding: 4px 8px;
+  background: var(--color-principal);
+  color: var(--color-secundario);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-size: 0.78em;
+}
+
+.pdf-link:hover {
+  background: #c0392b;
+}
+
+.pdf-button {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  background: var(--color-principal);
+  color: var(--color-secundario);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85em;
+  transition: background 0.3s;
+}
+
+.pdf-button:hover {
+  background: #c0392b; /* Color más oscuro al pasar el mouse */
+}
+
+.pdf-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+/* ---------------------------
+       FOTOS
+    --------------------------- */
+.galeria-fotos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.galeria-fotos .foto {
+  text-align: center;
+}
+
+.galeria-fotos .foto img {
+  max-width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
+}
+
+.galeria-fotos .foto p {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.galeria-fotos img {
+  height: 400px; /* Mantén la altura fija */
+  width: auto; /* El ancho se ajustará automáticamente */
+  object-fit: contain; /* Asegura que la imagen no se recorte y mantenga su proporción */
+  border-radius: 5px; /* Opcional: bordes redondeados */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar las imágenes */
+}
+
+/* ---------------------------
+       VIDEOS EMBEBIDOS EN BIO
+       Dimensiones fijas para una visualización más compacta
+    --------------------------- */
+.bio-video-embed {
+  width: 300px;
+  height: 170px;
+  margin: auto;
+}
+
+.bio-video-embed iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.seccion#partituras {
+  position: relative;
+}
+
+.creditos-partituras {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2em;
+  color: var(--color-texto);
+  opacity: 0.7;
+  /* Hace el texto un poco transparente */
+  font-style: italic;
+}
+
+.subtitulo-partituras {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--color-principal);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.donation {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.donate-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--color-principal);
+  color: var(--color-secundario);
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+.donate-button:hover {
+  background: #c0392b;
+}
+
