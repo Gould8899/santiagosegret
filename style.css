@@ -1,7 +1,7 @@
 /* Variables CSS para facilitar el mantenimiento */
 :root {
-  --color-principal: #4fb1d5;
-  --color-secundario: #fdf3ec;
+  --color-principal: #806c36;
+  --color-secundario: #e3e3e3;
   --color-fondo: #000;
   --color-texto: #fff;
   --color-overlay: rgba(30, 30, 30, 0.9);
@@ -197,19 +197,32 @@ section.seccion h2 {
 }
 
 .tab-menu-partituras li a {
-  padding: 1px 1px;
-  background: var(--color-menu);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 2px;
+  background: transparent;
+  /* Fondo transparente para pestañas inactivas */
   color: var(--color-texto);
+  /* Color del texto inactivo */
   text-decoration: none;
-  border-radius: 9px 9px 0 0;
+  border-radius: 8px;
+  /* Bordes redondeados */
   white-space: nowrap;
   transition: all 0.3s;
+  /* Transición suave */
+  border: 2px solid transparent;
+  /* Sin borde visible para pestañas inactivas */
 }
 
 .tab-menu-partituras li a:hover,
 .tab-menu-partituras li a.active {
   background: var(--color-principal);
+  /* Fondo celeste para la pestaña activa */
   color: var(--color-secundario);
+  /* Texto claro para la pestaña activa */
+  border: 2px solid var(--color-principal);
+  /* Borde del mismo color que el fondo */
 }
 
 .tab-content-partituras .tab-pane {
@@ -251,7 +264,7 @@ section.seccion h2 {
 
 .tab-menu li a {
   display: block;
-  padding: 8px 12px;
+  padding: 2px 2px;
   background: transparent;
   color: var(--color-texto);
   text-decoration: none;
@@ -362,31 +375,22 @@ section.seccion h2 {
 
 /* Botón PDF */
 .pdf-link {
-  display: inline-block;
-  /* Se comporta como un botón */
-  padding: 2px 6px;
-  /* Espaciado interno reducido */
-  background: var(--color-principal);
-  /* Fondo del botón */
-  color: var(--color-secundario);
-  /* Color del texto */
+  background: #015b98;
+  /* Cambia el color de fondo */
+  color: #fff;
+  /* Cambia el color del texto */
   text-decoration: none;
-  /* Sin subrayado */
   border-radius: 4px;
-  /* Bordes redondeados */
   font-size: 0.75em;
-  /* Tamaño de fuente más pequeño */
-  flex-shrink: 0;
-  /* Evita que el botón se reduzca */
-  align-self: flex-start;
-  /* Alinea el botón en la parte superior derecha */
+  padding: 2px 5px;
+  /* Ajusta el espaciado interno */
   transition: background 0.3s;
-  /* Animación al pasar el mouse */
+  /* Animación suave al pasar el mouse */
 }
 
 .pdf-link:hover {
-  background: #c0392b;
-  /* Fondo más oscuro al pasar el mouse */
+  background: #2980b9;
+  /* Cambia el color de fondo al pasar el mouse */
 }
 
 .pdf-button {
@@ -483,10 +487,10 @@ section.seccion h2 {
 }
 
 .subtitulo-partituras {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
   color: var(--color-principal);
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
   text-align: left;
 }
