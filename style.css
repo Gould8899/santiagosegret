@@ -283,42 +283,70 @@ section.seccion h2 {
 
 .obra {
   background: rgba(50, 50, 50, 0.9);
+  /* Fondo oscuro */
   border-radius: 4px;
+  /* Bordes redondeados */
   font-size: 0.8em;
+  /* Tamaño de fuente pequeño */
   display: flex;
-  flex-direction: column;
+  /* Diseño flexible */
+  flex-direction: row;
+  /* Elementos en una fila */
   justify-content: space-between;
-  align-items: flex-start;
-  height: 60px;
-  padding: 6px;
+  /* Espaciado entre los elementos */
+  align-items: center;
+  /* Centra los elementos verticalmente */
+  height: 50px;
+  /* Altura fija */
+  padding: 4px 8px;
+  /* Espaciado interno */
   box-sizing: border-box;
+  /* Incluye padding y bordes en el tamaño total */
   overflow: hidden;
+  /* Oculta contenido desbordado */
 }
 
+/* Título de la partitura */
 .obra h4 {
-  margin: 4px 0 2px;
+  margin: 0;
+  /* Sin margen */
   font-size: 0.9em;
+  /* Tamaño de fuente */
+  white-space: nowrap;
+  /* Evita que el texto se corte en varias líneas */
+  overflow: hidden;
+  /* Oculta texto desbordado */
+  text-overflow: ellipsis;
+  /* Agrega "..." si el texto es muy largo */
+  flex: 1;
+  /* Ocupa el espacio disponible */
 }
 
-.obra p {
-  margin: 0 0 6px;
-  color: #ccc;
-  font-size: 0.85em;
-}
-
+/* Botón PDF */
 .pdf-link {
   display: inline-block;
-  padding: 4px 8px;
+  /* Se comporta como un botón */
+  padding: 2px 6px;
+  /* Espaciado interno reducido */
   background: var(--color-principal);
+  /* Fondo del botón */
   color: var(--color-secundario);
+  /* Color del texto */
   text-decoration: none;
+  /* Sin subrayado */
   border-radius: 4px;
+  /* Bordes redondeados */
+  font-size: 0.75em;
+  /* Tamaño de fuente más pequeño */
+  flex-shrink: 0;
+  /* Evita que el botón se reduzca */
   transition: background 0.3s;
-  font-size: 0.78em;
+  /* Animación al pasar el mouse */
 }
 
 .pdf-link:hover {
   background: #c0392b;
+  /* Fondo más oscuro al pasar el mouse */
 }
 
 .pdf-button {
