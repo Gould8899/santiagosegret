@@ -120,26 +120,31 @@ section.seccion h2 {
 }
 
 .video-background {
-  position: fixed; /* Fija el video en la pantalla */
-  bottom: 10%; /* Distancia desde el borde inferior */
-  right: 10%; /* Distancia desde el borde derecho */
-  width: 50vw; /* El ancho será el 50% del ancho de la ventana */
-  height: 28vw; /* Mantén la proporción 16:9 (ancho/altura) */
-  z-index: -1; /* Envía el video detrás del contenido */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra para destacar */
-  border-radius: 8px; /* Bordes redondeados */
-  overflow: hidden; /* Asegura que el contenido no se desborde */
+  position: fixed;
+  /* Fija el video en la pantalla */
+  bottom: 10%;
+  /* Distancia desde el borde inferior */
+  right: 10%;
+  /* Distancia desde el borde derecho */
+  width: 50vw;
+  /* El ancho será el 50% del ancho de la ventana */
+  height: 28vw;
+  /* Mantén la proporción 16:9 (ancho/altura) */
+  z-index: -1;
+  /* Envía el video detrás del contenido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Agrega una sombra para destacar */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  overflow: hidden;
+  /* Asegura que el contenido no se desborde */
 }
 
 .inicio-content {
-  position: relative; /* Asegura que el texto esté por encima */
-  z-index: 1; /* Coloca el texto por encima del video */
-}
-
-.video-background iframe {
-  width: 100%; /* Asegura que el iframe ocupe todo el contenedor */
-  height: 100%;
-  border: 0;
+  position: relative;
+  /* Asegura que el texto esté por encima */
+  z-index: 1;
+  /* Coloca el texto por encima del video */
 }
 
 .video-background iframe {
@@ -196,13 +201,17 @@ section.seccion h2 {
 }
 
 .subtitulo-partituras {
-  font-size: 1.2em; /* Tamaño más pequeño */
-  font-weight: normal; /* Cambia a texto normal si no quieres negrita */
-  color: var(--color-secundario); /* Usa el color claro definido en la página */
+  font-size: 1.2em;
+  /* Tamaño más pequeño */
+  font-weight: normal;
+  /* Cambia a texto normal si no quieres negrita */
+  color: var(--color-secundario);
+  /* Usa el color claro definido en la página */
   margin-top: 20px;
   margin-bottom: 10px;
   text-align: left;
-  grid-column: 1 / -1; /* Asegura que ocupe toda la fila */
+  grid-column: 1 / -1;
+  /* Asegura que ocupe toda la fila */
 }
 
 /* ---------------------------
@@ -326,13 +335,15 @@ section.seccion h2 {
 }
 
 .pdf-button:hover {
-  background: #c0392b; /* Color más oscuro al pasar el mouse */
+  background: #c0392b;
+  /* Color más oscuro al pasar el mouse */
 }
 
 .pdf-icon {
   width: 16px;
   height: 16px;
-  margin-right: 5px; /* Espacio entre el ícono y el texto */
+  margin-right: 5px;
+  /* Espacio entre el ícono y el texto */
 }
 
 /* ---------------------------
@@ -361,11 +372,16 @@ section.seccion h2 {
 }
 
 .galeria-fotos img {
-  height: 400px; /* Mantén la altura fija */
-  width: auto; /* El ancho se ajustará automáticamente */
-  object-fit: contain; /* Asegura que la imagen no se recorte y mantenga su proporción */
-  border-radius: 5px; /* Opcional: bordes redondeados */
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar las imágenes */
+  height: 400px;
+  /* Mantén la altura fija */
+  width: auto;
+  /* El ancho se ajustará automáticamente */
+  object-fit: contain;
+  /* Asegura que la imagen no se recorte y mantenga su proporción */
+  border-radius: 5px;
+  /* Opcional: bordes redondeados */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  /* Sombra para destacar las imágenes */
 }
 
 /* ---------------------------
@@ -427,3 +443,42 @@ section.seccion h2 {
   background: #c0392b;
 }
 
+/* ---------------------------
+       NUEVA SECCIÓN: PREMIOS
+    --------------------------- */
+#premios {
+  padding: 20px;
+  background: var(--color-overlay);
+  color: var(--color-texto);
+}
+
+#premios h3 {
+  border-bottom: 2px solid var(--color-principal);
+  padding-bottom: 5px;
+}
+
+#premios ul {
+  list-style: none;
+  padding: 0;
+}
+
+#premios li {
+  margin-bottom: 10px;
+}
+
+/* Estilo para el enlace de YouTube */
+.youtube-link {
+  color: var(--color-principal);
+  text-decoration: none;
+}
+
+.youtube-link:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para el contador de visitas */
+#visit-counter {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+}
