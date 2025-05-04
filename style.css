@@ -281,6 +281,7 @@ section.seccion h2 {
   margin-top: 15px;
 }
 
+/* Contenedor de cada partitura */
 .obra {
   background: rgba(50, 50, 50, 0.9);
   /* Fondo oscuro */
@@ -294,16 +295,18 @@ section.seccion h2 {
   /* Elementos en una fila */
   justify-content: space-between;
   /* Espaciado entre los elementos */
-  align-items: center;
-  /* Centra los elementos verticalmente */
-  height: 50px;
-  /* Altura fija */
-  padding: 4px 8px;
+  align-items: flex-start;
+  /* Alinea los elementos al inicio verticalmente */
+  height: auto;
+  /* Altura automática para adaptarse al contenido */
+  padding: 8px;
   /* Espaciado interno */
   box-sizing: border-box;
   /* Incluye padding y bordes en el tamaño total */
   overflow: hidden;
   /* Oculta contenido desbordado */
+  min-height: 50px;
+  /* Altura mínima para mantener consistencia */
 }
 
 /* Título de la partitura */
@@ -312,14 +315,18 @@ section.seccion h2 {
   /* Sin margen */
   font-size: 0.9em;
   /* Tamaño de fuente */
-  white-space: nowrap;
-  /* Evita que el texto se corte en varias líneas */
   overflow: hidden;
   /* Oculta texto desbordado */
   text-overflow: ellipsis;
   /* Agrega "..." si el texto es muy largo */
   flex: 1;
   /* Ocupa el espacio disponible */
+  margin-right: 10px;
+  /* Espaciado entre el título y el botón */
+  word-wrap: break-word;
+  /* Permite que las palabras largas se dividan */
+  line-height: 1.2em;
+  /* Altura de línea para texto más compacto */
 }
 
 /* Botón PDF */
@@ -340,6 +347,8 @@ section.seccion h2 {
   /* Tamaño de fuente más pequeño */
   flex-shrink: 0;
   /* Evita que el botón se reduzca */
+  align-self: flex-start;
+  /* Alinea el botón en la parte superior derecha */
   transition: background 0.3s;
   /* Animación al pasar el mouse */
 }
