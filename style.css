@@ -289,7 +289,7 @@ section.seccion h2 {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  height: 80px;
+  height: 60px;
   padding: 6px;
   box-sizing: border-box;
   overflow: hidden;
