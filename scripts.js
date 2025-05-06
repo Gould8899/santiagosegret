@@ -82,6 +82,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Contador de visitas
   setupVisitCounter();
+
+  // Reproducir música de fondo al hacer clic en el botón
+  const backgroundMusic = document.getElementById('background-music');
+  const playButton = document.getElementById('play-music');
+
+  if (backgroundMusic && playButton) {
+    playButton.addEventListener('click', () => {
+      backgroundMusic.volume = 0.5; // Ajusta el volumen si es necesario
+      backgroundMusic.play().then(() => {
+        playButton.style.display = 'none'; // Oculta el botón después de reproducir
+      }).catch(error => {
+        console.error("Error al reproducir la música:", error);
+      });
+    });
+  }
 });
 
 // Función para configurar pestañas
