@@ -145,23 +145,33 @@ section.seccion h2 {
 
 .video-background {
   position: fixed;
-  /* Fija el video en la pantalla */
-  bottom: 10%;
-  /* Distancia desde el borde inferior */
-  right: 10%;
-  /* Distancia desde el borde derecho */
-  width: 50vw;
-  /* El ancho será el 50% del ancho de la ventana */
-  height: 28vw;
-  /* Mantén la proporción 16:9 (ancho/altura) */
+  bottom: 1%;
+  /* Reducimos la distancia desde el borde inferior */
+  right: 30%;
+  /* Controla la distancia desde el borde derecho */
+  width: 30vw;
+  /* El ancho será el 30% del ancho de la ventana */
+  height: 30vw;
+  /* Mantén la proporción 1:1 para el círculo */
   z-index: -1;
   /* Envía el video detrás del contenido */
+  border-radius: 50%;
+  /* Hace que el contenedor sea circular */
+  overflow: hidden;
+  /* Oculta las partes del video fuera del círculo */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   /* Agrega una sombra para destacar */
-  border-radius: 8px;
-  /* Bordes redondeados */
-  overflow: hidden;
-  /* Asegura que el contenido no se desborde */
+}
+
+.video-background iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Asegura que el video llene el contenedor */
+  transform: scale(1.5);
+  /* Amplía el video para centrar el área deseada */
+  border: none;
+  /* Elimina cualquier borde del iframe */
 }
 
 .inicio-content {
@@ -169,12 +179,6 @@ section.seccion h2 {
   /* Asegura que el texto esté por encima */
   z-index: 1;
   /* Coloca el texto por encima del video */
-}
-
-.video-background iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
 }
 
 .inicio-content {
