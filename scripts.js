@@ -83,18 +83,22 @@ document.addEventListener("DOMContentLoaded", function () {
   // Contador de visitas
   setupVisitCounter();
 
-  // Reproducir música de fondo al hacer clic en el botón
+  // Reproducir o detener música de fondo al hacer clic en el botón
   const backgroundMusic = document.getElementById('background-music');
-  const playButton = document.getElementById('play-music');
+  const toggleButton = document.getElementById('toggle-music');
 
-  if (backgroundMusic && playButton) {
-    playButton.addEventListener('click', () => {
-      backgroundMusic.volume = 0.5; // Ajusta el volumen si es necesario
-      backgroundMusic.play().then(() => {
-        playButton.style.display = 'none'; // Oculta el botón después de reproducir
-      }).catch(error => {
-        console.error("Error al reproducir la música:", error);
-      });
+  if (backgroundMusic && toggleButton) {
+    toggleButton.addEventListener('click', () => {
+      if (backgroundMusic.paused) {
+        backgroundMusic.play().then(() => {
+          toggleButton.textContent = 'Detener Música'; // Cambia el texto del botón
+        }).catch(error => {
+          console.error("Error al reproducir la música:", error);
+        });
+      } else {
+        backgroundMusic.pause();
+        toggleButton.textContent = 'Reproducir Música'; // Cambia el texto del botón
+      }
     });
   }
 });
