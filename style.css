@@ -13,23 +13,25 @@
     --------------------------- */
 body {
   font-family: 'Courier Prime', monospace;
-  /* Fuente para toda la página */
   color: var(--color-secundario);
-  /* Cambiar a color tenue */
+  /* Unificar el color de las letras */
   background: var(--color-fondo);
   margin: 0;
   padding: 0;
   height: 100vh;
   overflow: hidden;
+  font-weight: normal;
+  /* Eliminar negritas globalmente */
 }
 
 h1,
 h2,
 h3 {
   font-family: inherit;
-  /* Usa la misma fuente que el body */
-  color: var(--color-principal);
-  /* Mantén el color principal */
+  color: var(--color-secundario);
+  /* Unificar el color de los títulos */
+  font-weight: normal;
+  /* Eliminar negritas */
 }
 
 /* ---------------------------
@@ -51,14 +53,16 @@ nav.sidebar {
 }
 
 nav.sidebar h1 {
-  font-family: 'Courier Prime', monospace;
-  font-size: 2em;
   color: var(--color-principal);
+  /* Color del título */
+  font-weight: normal;
+  /* Sin negritas */
+  font-size: 2em;
+  /* Tamaño del título */
   text-align: left;
-  /* Alinea el texto a la izquierda */
+  /* Alineación */
   margin-bottom: 20px;
   padding-left: 15px;
-  /* Asegúrate de que coincida con las pestañas */
 }
 
 .pestañas {
@@ -82,7 +86,9 @@ nav.sidebar h1 {
   padding: 10px 15px;
   /* Ajusta el padding interno */
   color: var(--color-secundario);
-  /* Mantener el color tenue */
+  /* Mantener el color de las pestañas */
+  font-weight: normal;
+  /* Eliminar negritas */
   background: transparent;
   text-decoration: none;
   border-radius: 4px;
@@ -125,7 +131,9 @@ section.seccion {
   background: var(--color-overlay);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--color-secundario);
-  /* Cambiar a color tenue */
+  /* Unificar el color de las secciones */
+  font-weight: normal;
+  /* Eliminar negritas */
 }
 
 section.seccion h2 {
@@ -211,8 +219,10 @@ section.seccion h2 {
   padding: 2px 2px;
   background: transparent;
   /* Fondo transparente para pestañas inactivas */
-  color: var(--color-texto);
-  /* Color del texto inactivo */
+  color: var(--color-secundario);
+  /* Unificar el color de las pestañas */
+  font-weight: normal;
+  /* Eliminar negritas */
   text-decoration: none;
   border-radius: 8px;
   /* Bordes redondeados */
@@ -274,7 +284,10 @@ section.seccion h2 {
   display: block;
   padding: 2px 2px;
   background: transparent;
-  color: var(--color-texto);
+  color: var(--color-secundario);
+  /* Unificar el color de las pestañas */
+  font-weight: normal;
+  /* Eliminar negritas */
   text-decoration: none;
   border-radius: 4px;
   transition: background 0.3s;
@@ -368,24 +381,30 @@ section.seccion h2 {
   /* Sin margen */
   font-size: 0.9em;
   /* Tamaño de fuente */
+  font-weight: 400;
+  /* Asegurar un peso normal consistente */
   overflow: hidden;
   /* Oculta texto desbordado */
   text-overflow: ellipsis;
   /* Agrega "..." si el texto es muy largo */
+  white-space: nowrap;
+  /* Evitar que el texto se divida en varias líneas */
   flex: 1;
   /* Ocupa el espacio disponible */
-  margin-right: 10px;
+  margin-bottom: 5px;
   /* Espaciado entre el título y el botón */
-  word-wrap: break-word;
-  /* Permite que las palabras largas se dividan */
-  line-height: 1.2em;
-  /* Altura de línea para texto más compacto */
   color: var(--color-secundario);
-  /* Cambiar a color tenue */
+  /* Mantener el color unificado */
 }
 
 /* Botón PDF */
 .pdf-link {
+  color: var(--color-secundario);
+  /* Unificar el color de las letras */
+  font-weight: normal;
+  /* Eliminar negritas */
+  text-decoration: none;
+  /* Asegurar que no haya subrayado en los enlaces */
   background: #015b98;
   /* Cambia el color de fondo */
   color: #fff;
@@ -554,7 +573,9 @@ section.seccion h2 {
 /* Estilo para el enlace de YouTube */
 .youtube-link {
   color: var(--color-secundario);
-  /* Cambiar a color tenue */
+  /* Unificar el color de los enlaces */
+  font-weight: normal;
+  /* Eliminar negritas */
   text-decoration: none;
 }
 
@@ -568,5 +589,7 @@ section.seccion h2 {
   margin-top: 20px;
   font-size: 1.2em;
   color: var(--color-secundario);
-  /* Cambiar a color tenue */
+  /* Unificar el color del contador */
+  font-weight: normal;
+  /* Eliminar negritas */
 }
