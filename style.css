@@ -1,8 +1,8 @@
 /* Variables CSS para facilitar el mantenimiento */
 :root {
-  --color-principal: #806c36;
+  --color-principal: #9a2900;
   --color-secundario: #e3e3e3;
-  --color-fondo: #6d1616;
+  --color-fondo: #000000;
   --color-texto: #fff;
   --color-overlay: rgba(30, 30, 30, 0.9);
   --color-menu: rgba(40, 40, 40, 0.95);
