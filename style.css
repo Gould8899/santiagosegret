@@ -14,7 +14,8 @@
 body {
   font-family: 'Courier Prime', monospace;
   /* Fuente para toda la página */
-  color: var(--color-texto);
+  color: var(--color-secundario);
+  /* Cambiar a color tenue */
   background: var(--color-fondo);
   margin: 0;
   padding: 0;
@@ -81,6 +82,7 @@ nav.sidebar h1 {
   padding: 10px 15px;
   /* Ajusta el padding interno */
   color: var(--color-secundario);
+  /* Mantener el color tenue */
   background: transparent;
   text-decoration: none;
   border-radius: 4px;
@@ -122,6 +124,8 @@ section.seccion {
   overflow-y: auto;
   background: var(--color-overlay);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-secundario);
+  /* Cambiar a color tenue */
 }
 
 section.seccion h2 {
@@ -302,7 +306,8 @@ section.seccion h2 {
   /* Cambia el peso de la fuente a normal */
   font-size: 1em;
   /* Ajusta el tamaño si es necesario */
-  color: var(--color-texto);
+  color: var(--color-secundario);
+  /* Cambiar a color tenue */
   /* Mantén el color del texto */
   margin: 10px 0;
   /* Ajusta el margen si es necesario */
@@ -371,6 +376,8 @@ section.seccion h2 {
   /* Permite que las palabras largas se dividan */
   line-height: 1.2em;
   /* Altura de línea para texto más compacto */
+  color: var(--color-secundario);
+  /* Cambiar a color tenue */
 }
 
 /* Botón PDF */
@@ -440,7 +447,8 @@ section.seccion h2 {
 .galeria-fotos .foto p {
   margin-top: 5px;
   font-size: 0.9em;
-  color: #ccc;
+  color: var(--color-secundario);
+  /* Cambiar a color tenue */
 }
 
 .galeria-fotos img {
@@ -521,7 +529,8 @@ section.seccion h2 {
 #premios {
   padding: 20px;
   background: var(--color-overlay);
-  color: var(--color-texto);
+  color: var(--color-secundario);
+  /* Cambiar a color tenue */
 }
 
 #premios h3 {
@@ -540,7 +549,8 @@ section.seccion h2 {
 
 /* Estilo para el enlace de YouTube */
 .youtube-link {
-  color: var(--color-principal);
+  color: var(--color-secundario);
+  /* Cambiar a color tenue */
   text-decoration: none;
 }
 
@@ -553,4 +563,6 @@ section.seccion h2 {
   text-align: center;
   margin-top: 20px;
   font-size: 1.2em;
+  color: var(--color-secundario);
+  /* Cambiar a color tenue */
 }
