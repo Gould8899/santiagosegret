@@ -34,6 +34,19 @@ h3 {
   /* Eliminar negritas */
 }
 
+/* Enlaces */
+a {
+  color: #007bff;
+  /* Azul estándar para enlaces */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+  /* Azul más oscuro al pasar el mouse */
+  text-decoration: underline;
+}
+
 /* ---------------------------
        LAYOUT PRINCIPAL: MENÚ LATERAL Y CONTENIDO
     --------------------------- */
