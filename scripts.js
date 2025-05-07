@@ -83,45 +83,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Contador de visitas
   setupVisitCounter();
 
-  // Reproducir o detener música de fondo al hacer clic en el botón
-  const backgroundMusic = document.getElementById('background-music');
-  const toggleButton = document.getElementById('toggle-music');
-
-  if (backgroundMusic && toggleButton) {
-    toggleButton.addEventListener('click', () => {
-      if (backgroundMusic.paused) {
-        backgroundMusic.play().then(() => {
-          toggleButton.textContent = 'Detener Música'; // Cambia el texto del botón
-        }).catch(error => {
-          console.error("Error al reproducir la música:", error);
-        });
-      } else {
-        backgroundMusic.pause();
-        toggleButton.textContent = 'Reproducir Música'; // Cambia el texto del botón
-      }
-    });
-  }
-
   const audio = document.getElementById("background-music");
+  const toggleButton = document.getElementById("toggle-music");
+
   // Inicializar el botón
   toggleButton.textContent = "Reproducir Música";
 
   // Evento para manejar la reproducción
   toggleButton.addEventListener("click", () => {
     if (audio.paused) {
-      audio.currentTime = 0; // Reiniciar desde el inicio
       audio.play();
-      toggleButton.textContent = "Reproducir de nuevo";
+      toggleButton.textContent = "Detener Música"; // Cambia el texto del botón
     } else {
       audio.pause();
-      audio.currentTime = 0; // Detener y reiniciar
-      toggleButton.textContent = "Reproducir Música";
+      toggleButton.textContent = "Reproducir Música"; // Cambia el texto del botón
     }
-  });
-
-  // Evento para detectar cuando termina la música
-  audio.addEventListener("ended", () => {
-    toggleButton.textContent = "Reproducir Música";
   });
 });
 
