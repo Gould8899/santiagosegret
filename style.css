@@ -641,10 +641,22 @@ section.seccion h2 {
 }
 
 .partituras-table a {
-  color: var(--color-secundario);
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: #005aba;
+  /* Azul estándar */
+  color: #fff;
+  /* Texto blanco */
   text-decoration: none;
+  border-radius: 4px;
+  /* Bordes redondeados */
+  font-size: 0.85em;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s;
 }
 
 .partituras-table a:hover {
-  text-decoration: underline;
+  background-color: #0056b3;
+  /* Azul más oscuro al pasar el mouse */
 }
