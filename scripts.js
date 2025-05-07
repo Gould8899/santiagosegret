@@ -101,6 +101,28 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  const audio = document.getElementById("background-music");
+  // Inicializar el botón
+  toggleButton.textContent = "Reproducir Música";
+
+  // Evento para manejar la reproducción
+  toggleButton.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.currentTime = 0; // Reiniciar desde el inicio
+      audio.play();
+      toggleButton.textContent = "Reproducir de nuevo";
+    } else {
+      audio.pause();
+      audio.currentTime = 0; // Detener y reiniciar
+      toggleButton.textContent = "Reproducir Música";
+    }
+  });
+
+  // Evento para detectar cuando termina la música
+  audio.addEventListener("ended", () => {
+    toggleButton.textContent = "Reproducir Música";
+  });
 });
 
 // Función para configurar pestañas
