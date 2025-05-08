@@ -99,6 +99,25 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleButton.textContent = "Reproducir Música"; // Cambia el texto del botón
     }
   });
+
+  // Manejar reproducción/pausa del audio Trastienda.mp3
+  const trastiendaAudio = document.getElementById("trastienda-audio");
+  const toggleTrastiendaButton = document.getElementById("toggle-trastienda");
+
+  toggleTrastiendaButton.addEventListener("click", () => {
+    if (trastiendaAudio.paused) {
+      trastiendaAudio.play();
+      toggleTrastiendaButton.textContent = "Pausar Grabación";
+    } else {
+      trastiendaAudio.pause();
+      toggleTrastiendaButton.textContent = "Reproducir Grabación";
+    }
+  });
+
+  // Restablecer el texto del botón cuando el audio termine
+  trastiendaAudio.addEventListener("ended", () => {
+    toggleTrastiendaButton.textContent = "Reproducir Grabación";
+  });
 });
 
 // Función para configurar pestañas
