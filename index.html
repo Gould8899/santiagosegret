@@ -13,8 +13,6 @@
 </head>
 
 <body>
-  <audio id="background-music" src="Frustraci.mp3"></audio>
-  <button id="toggle-music" style="position: fixed; top: 10px; right: 10px; z-index: 1000;">Reproducir Música</button>
   <div class="container">
     <!-- MENÚ LATERAL -->
     <nav class="sidebar" role="navigation">
@@ -991,21 +989,34 @@
             Al rededor de los 10 años tomó clases de piano con Liliana Campos. A los 15 estaba debutando como
             telonero de Javier Malosetti en La Trastienda tocando solos de Piazzolla.
           </p>
-          <p>Grabación de la Trastienda, tocando "La Familia" y "Mi Refugio".</p>
-          <div class="bio-audio">
-            <button id="toggle-trastienda"
-              style="padding: 10px; background-color: #9a2900; color: #e3e3e3; border: none; border-radius: 5px; cursor: pointer;">
-              Reproducir Grabación
-            </button>
-            <audio id="trastienda-audio" src="Trastienda.mp3"></audio>
+
+          <div class="audio-container">
+            <p>Grabación de la Trastienda, tocando "La Familia" y "Mi Refugio".</p>
+            <div class="audio-item">
+              <p><strong>La Familia:</strong></p>
+              <audio controls>
+                <source src="Versión-editada-separada-La-Familia.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+              </audio>
+            </div>
+            <div class="audio-item">
+              <p><strong>Mi Refugio:</strong></p>
+              <audio controls>
+                <source src="Versión-editada-separada-Mi-Refugio.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+              </audio>
+            </div>
           </div>
+
           <p>
             A lo largo de su adolescencia estudió bandoneón con: Pablo Mainetti, Julio Pane, Mariano "Paya" Cigna,
             Federico Pereiro y con Carlos Lazzari a los 18 años.
           </p>
+
           <p>
             Integró la camada 2005 de la Orquesta de tango Emilio Balcarce.
           </p>
+
           <div class="bio-media">
             <p>Foto con Emilio Balcarce en el Panteón de Roma.</p>
             <img src="04) Fotos/con emilio balcarce en el panteón de roma.jpg" alt="Foto con Emilio" width="280"

@@ -118,6 +118,34 @@ document.addEventListener("DOMContentLoaded", function () {
   trastiendaAudio.addEventListener("ended", () => {
     toggleTrastiendaButton.textContent = "Reproducir Grabación";
   });
+
+  // Manejar reproducción/pausa para "Mi Refugio"
+  const audioMiRefugio = document.getElementById("audio-mi-refugio");
+  const buttonMiRefugio = document.getElementById("audio-button-mi-refugio");
+
+  buttonMiRefugio.addEventListener("click", () => {
+    if (audioMiRefugio.paused) {
+      audioMiRefugio.play();
+      buttonMiRefugio.textContent = "Pausar 'Mi Refugio'";
+    } else {
+      audioMiRefugio.pause();
+      buttonMiRefugio.textContent = "Reproducir 'Mi Refugio'";
+    }
+  });
+
+  // Manejar reproducción/pausa para "La Familia"
+  const audioLaFamilia = document.getElementById("audio-la-familia");
+  const buttonLaFamilia = document.getElementById("audio-button-la-familia");
+
+  buttonLaFamilia.addEventListener("click", () => {
+    if (audioLaFamilia.paused) {
+      audioLaFamilia.play();
+      buttonLaFamilia.textContent = "Pausar 'La Familia'";
+    } else {
+      audioLaFamilia.pause();
+      buttonLaFamilia.textContent = "Reproducir 'La Familia'";
+    }
+  });
 });
 
 // Función para configurar pestañas
