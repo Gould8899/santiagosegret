@@ -740,3 +740,40 @@ section.seccion h2 {
 .audio-button:hover {
   background-color: #c0392b;
 }
+
+/* ---------------------------
+       TAB CONTENT ADJUSTMENTS
+    --------------------------- */
+.tab-content {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.tab-pane {
+  display: none;
+  width: 100%;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+/* Ajustar márgenes y ancho del texto en la sección Bio */
+#bio .bio-section {
+  max-width: 20000px;
+  /* Limita el ancho del texto */
+  margin: 800 auto;
+  /* Centra el contenido horizontalmente */
+  padding: 2px;
+  /* Agrega espacio interno */
+  line-height: 1;
+  /* Mejora la legibilidad */
+}
+
+#bio .bio-section p {
+  margin-bottom: 15px;
+  /* Espaciado entre párrafos */
+  text-align: justify;
+  /* Justifica el texto */
+}
